@@ -15,35 +15,20 @@ lib_LTLIBRARIES = libmikado-@MIKADO_API_VERSION@.la
 
 ## PLEASE KEEP THEM IN ALPHABETICAL ORDER
 libmikado_@MIKADO_API_VERSION@_la_SOURCES = \
-    connection.cpp \
-    dmitri_translator.cpp \
-    fudi_sender.cpp \
-    fudi_translator.cpp \
-    geotransform.cpp \
-    listener.cpp \
-    maths.cpp \
-    node.cpp \
-    osc_scene.cpp \
-    oscreceiver.cpp \
-    oscsender.cpp \
-    oscutils.cpp \
-    scene.cpp \
-    soundsource.cpp \
-    spatdif_receiver.cpp \
-    spatdif_translator.cpp \
-    translator.cpp \
-    wrapper.cpp
+    mikado-version.c \
+    mikado.c
 
 ## Instruct libtool to include ABI version information in the generated shared
 ## library file (.so).  The library ABI version is defined in configure.ac, so
 ## that all version information is kept in one place.
-libmikado_@MIKADO_API_VERSION@_la_LDFLAGS = $(LIBLO_LIBS) -export-dynamic -version-info $(MIKADO_LT_VERSION)
+libmikado_@MIKADO_API_VERSION@_la_LDFLAGS = -export-dynamic -version-info $(MIKADO_LT_VERSION)
 
 libmikado_@MIKADO_API_VERSION@_la_includedir = $(includedir)/mikado-$(MIKADO_API_VERSION)/mikado
 
 ## PLEASE KEEP THEM IN ALPHABETICAL ORDER
 libmikado_@MIKADO_API_VERSION@_la_include_HEADERS = \
-    mikado.h
+    mikado.h \
+    mikado-version.h
 
 EXTRA_DIST = config.h
 

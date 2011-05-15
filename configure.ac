@@ -99,9 +99,7 @@ AC_CHECK_FUNCS([gettimeofday memmove mkdir setenv sqrt strchr strpbrk uname])
 
 AX_PTHREAD
 
-fi
-
-CFLAGS += " -Wall -Wextra -Wfatal-errors -Werror "
+CFLAGS+=" -Wall -Wextra -Wfatal-errors -Werror "
 
 # GNU help2man creates man pages from --help output; in many cases, this
 # is sufficient, and obviates the need to maintain man pages separately.
@@ -118,8 +116,9 @@ fi
 # is no need to rename the template file when the API version changes.
 AC_CONFIG_FILES([
         Makefile 
-        mikado/version.c
+        mikado/mikado-version.h
         mikado/Makefile 
+        src/Makefile
         tests/Makefile
         doc/Makefile
         mikado-${MIKADO_API_VERSION}.pc:mikado.pc.in
