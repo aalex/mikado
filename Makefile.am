@@ -8,6 +8,7 @@ SUBDIRS = \
     mikado \
     src \
     tests \
+    data \
     doc
 
 EXTRA_DIST = \
