@@ -99,6 +99,22 @@ AC_CHECK_FUNCS([gettimeofday memmove mkdir setenv sqrt strchr strpbrk uname])
 
 AX_PTHREAD
 
+# Clutter-GTK
+PKG_CHECK_MODULES([CLUTTERGTK], [clutter-gtk-0.10 >= 0.10], have_clutter_gtk=true, have_clutter_gtk=false)
+if test "x${have_clutter_gtk}" = "xfalse" ; then
+    AC_MSG_ERROR([missing package: libclutter-gtk-0.10-dev])
+fi
+AC_SUBST([CLUTTERGTK_LIBS])
+AC_SUBST([CLUTTERGTK_CFLAGS])
+
+# libxml2
+PKG_CHECK_MODULES([LIBXML], [libxml-2.0], have_libxml=true, have_libxml=false)
+if test "x${have_libxml}" = "xfalse" ; then
+    AC_MSG_ERROR([missing package: libxml2-dev])
+fi
+AC_SUBST([LIBXML_LIBS])
+AC_SUBST([LIBXML_CFLAGS])
+
 CFLAGS+=" -Wall -Wextra -Wfatal-errors -Werror "
 
 # GNU help2man creates man pages from --help output; in many cases, this

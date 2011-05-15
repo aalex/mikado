@@ -29,3 +29,4 @@ mikado/config.h.in
 mikado/stamp-h1
 missing
 mikado/mikado-version.h
+src/mikado
