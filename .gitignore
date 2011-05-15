@@ -30,3 +30,4 @@ mikado/stamp-h1
 missing
 mikado/mikado-version.h
 src/mikado
+*.tar.gz
