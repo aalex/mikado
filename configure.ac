@@ -116,6 +116,14 @@ fi
 AC_SUBST([LIBXML_LIBS])
 AC_SUBST([LIBXML_CFLAGS])
 
+# GEGL
+PKG_CHECK_MODULES([GEGL], [gegl], have_gegl=true, have_gegl=false)
+if test "x${have_gegl}" = "xfalse" ; then
+    AC_MSG_ERROR([missing package: libgegl-0.0-dev])
+fi
+AC_SUBST([LIBGEGL_LIBS])
+AC_SUBST([LIBGEGL_CFLAGS])
+
 CFLAGS+=" -Wall -Wextra -Wfatal-errors -Werror "
 
 # GNU help2man creates man pages from --help output; in many cases, this
