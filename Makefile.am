@@ -5,8 +5,8 @@ ACLOCAL_AMFLAGS = -I m4
 AUTOMAKE_OPTIONS = foreign
 
 SUBDIRS = \
-    src \
     mikado \
+    src \
     tests \
     doc
 

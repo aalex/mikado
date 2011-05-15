@@ -2,6 +2,7 @@
 #include <clutter/clutter.h>
 #include <clutter-gtk/clutter-gtk.h>
 #include <stdlib.h>
+#include "mikado.h"
 
 ClutterActor *stage = NULL;
 
@@ -39,6 +40,7 @@ int main(int argc, char *argv[])
 {
     ClutterColor stage_color = { 0x00, 0x00, 0x00, 0xff }; /* Black */
     gtk_clutter_init (&argc, &argv);
+    mikado_hello();
     /* Create the window and some child widgets: */
     GtkWidget *window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
     GtkWidget *vbox = gtk_vbox_new (FALSE, 6);

@@ -1,5 +1,15 @@
 bin_PROGRAMS = mikado
 
+AM_CFLAGS = \
+	$(CLUTTERGTK_CFLAGS) \
+	$(LIBXML_CFLAGS) \
+	-I$(top_srcdir)/mikado
+
+LDADD = \
+	$(CLUTTERGTK_LIBS) \
+	$(LIBXML_LIBS) \
+	$(top_builddir)/mikado/libmikado-@MIKADO_API_VERSION@.la
+
 headers = \
 	gui.h
 
@@ -8,11 +18,4 @@ mikado_SOURCES = \
 	main.c \
 	$(headers)
 
-mikado_CFLAGS = \
-	$(CLUTTERGTK_CFLAGS) \
-	$(LIBXML_CFLAGS)
-
-mikado_LDADD = \
-	$(CLUTTERGTK_LIBS) \
-	$(LIBXML_LIBS)
 
