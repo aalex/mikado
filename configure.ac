@@ -13,8 +13,8 @@
 # - increase mikado_micro_version to the next odd number
 # - increase mikado_interface_version to the next odd number
 m4_define([mikado_major_version], [0])
-m4_define([mikado_minor_version], [1])
-m4_define([mikado_micro_version], [0])
+m4_define([mikado_minor_version], [0])
+m4_define([mikado_micro_version], [9])
 
 m4_define([mikado_release_status],
           [m4_if(m4_eval(mikado_micro_version % 2), [1], [git],
