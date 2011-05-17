@@ -145,6 +145,7 @@ AC_CONFIG_FILES([
         mikado/Makefile 
         src/Makefile
         tests/Makefile
+        data/Makefile
         doc/Makefile
         mikado-${MIKADO_API_VERSION}.pc:mikado.pc.in
         ])
