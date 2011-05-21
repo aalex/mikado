@@ -11,3 +11,4 @@ All of its children would be handled internally, as well as click events and the
 From there, the user could create child nodes by clicking and choosing a node type.
 The node properties would appear in an other region of the window, in some GTK+ widgets.
 
+Then, the developer of the application would create node types that would wrap each GEGL node type or that could be automated with some introspection mechanism, like gegl provides: gegl_list_operations, gegl_node_get_valist.
