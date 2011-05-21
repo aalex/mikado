@@ -30,3 +30,4 @@ missing
 mikado/mikado-version.h
 src/mikado
 *.tar.gz
+prototypes/graph-layout/run
