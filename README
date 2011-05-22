@@ -8,12 +8,25 @@ Libre graph-oriented photo editor
 
 About
 -----
-Mikado is a graph-oriented photo editor.
+Mikado is a graph-oriented photo editor based on GEGL.
+Mikado is a generic library for creating patching environments.
+(such as flowcanvas)
 It is not yet in a working state for now.
 
 License
 -------
 Mikado is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License and GNU General Public License as published by the Free Software Foundation; either version 3 of the Licenses, or (at your option) any later version. The library itself is licensed under LGPL while the commandline application is licensed under GPL.
+
+Future directions
+-----------------
+The Mikado library could allow us to create patching environments for different backends that can be used in graph-oriented way:
+
+ * GEGL (image effects)
+ * GLSL shaders
+ * SpatOsc
+ * libpd
+ * libmapper
+ * Pyo
 
 Authors
 -------
